@@ -34,4 +34,4 @@ Once created, adding an entire resources (i.e. Users) can be done like this:
 Full documentation can be found on our [GitHub Pages site](http://mvc-lite.github.io/mvc-lite)
 
 ## Contact
-We're available on IRC at `chat.freenode.net` in the `#mvc-lite` room. :)
+We're available on IRC at [chat.freenode.net](irc://chat.freenode.net)`` in the `#mvc-lite` room. :)
