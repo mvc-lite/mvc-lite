@@ -83,7 +83,8 @@ class DispatcherTest extends TestCase
                 'translateActionName',
                 'getRequest',
                 'getConfig',
-                'getLoader'
+                'getLoader',
+                'setMethod',
             ])
             ->getMock();
 
@@ -99,7 +100,7 @@ class DispatcherTest extends TestCase
 
         $request = $this->getMockBuilder('\MvcLite\Request')
             ->disableOriginalConstructor()
-            ->setMethods(['getParams'])
+            ->setMethods(['getParams', 'setMethod'])
             ->getMock();
 
         $request->expects($this->once())
