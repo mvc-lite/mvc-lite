@@ -72,7 +72,7 @@ class Request extends ObjectAbstract
         $this->params = array_merge($this->params, $_GET);
         $this->setHeaders($_SERVER);
         $this->setParams($this->buildFromString(@$_GET['q']));
-        $this->setMethod($_SERVER['REQUEST_METHOD']);
+        $this->setMethod($_SERVER);
     }
 
     /**
@@ -84,6 +84,9 @@ class Request extends ObjectAbstract
      */
     public function setMethod($method)
     {
+        if (is_array($method)) {
+            $method = $method['REQUEST_METHOD'];
+        }
         $this->method = $method;
         return $this;
     }
