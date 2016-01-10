@@ -1,6 +1,7 @@
 # MVC Lite
 
-![[MVC Lite](http://mvc-lite.github.io/mvc-lite/images/logo.png)]
+![MVC Lite](http://mvc-lite.github.io/mvc-lite/images/logo.png)
+
 [![Build Status](https://travis-ci.org/mvc-lite/mvc-lite.svg?branch=master)](https://travis-ci.org/mvc-lite/mvc-lite)
 [![Latest Stable Version](https://poser.pugx.org/mvc-lite/mvc-lite/v/stable)](https://packagist.org/packages/mvc-lite/mvc-lite)
 [![Total Downloads](https://poser.pugx.org/mvc-lite/mvc-lite/downloads)](https://packagist.org/packages/mvc-lite/mvc-lite)
