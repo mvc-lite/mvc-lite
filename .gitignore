@@ -5,6 +5,7 @@
 *.settings
 composer.lock
 cache.properties
+.DS_Store
 
 # Folders
 vendor/
