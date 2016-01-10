@@ -85,12 +85,16 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Request
                 extends <a title="MvcLite\ObjectAbstract" href="../classes/MvcLite_ObjectAbstract.html">ObjectAbstract</a>
-            {<br/><ul class="none"><li>// constants</li><li>const ERR_BAD_CONTENT_TYPE = 'Content type [%s] not recognized';</li></ul><ul class="none"><li>// Inherited constants from <a title="MvcLite\ObjectAbstract" href="../classes/MvcLite_ObjectAbstract.html">ObjectAbstract</a></li><li>const <a href="#MSG_ERR_IDENTIFY">MSG_ERR_IDENTIFY</a> = 'Descendents must implement the identify method';</li></ul><ul class="none"><li>// members</li><li>protected array <a href="#members">$params</a> =
+            {<br/><ul class="none"><li>// constants</li><li>const ERR_BAD_CONTENT_TYPE = 'Content type [%s] not recognized';</li></ul><ul class="none"><li>// Inherited constants from <a title="MvcLite\ObjectAbstract" href="../classes/MvcLite_ObjectAbstract.html">ObjectAbstract</a></li><li>const <a href="#MSG_ERR_IDENTIFY">MSG_ERR_IDENTIFY</a> = 'Descendents must implement the identify method';</li></ul><ul class="none"><li>// members</li><li>protected string <a href="#members">$method</a> =
+                        'get';
+                    </li><li>protected array <a href="#members">$params</a> =
                         ;
                     </li><li>protected array <a href="#members">$headers</a> =
                         ;
                     </li><li>protected  <a href="#members">$uri</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="MvcLite\Request" href="../classes/MvcLite_Request/init.html">init</a>()
+                    </li><li>public Request <a title="MvcLite\Request" href="../classes/MvcLite_Request/setMethod.html">setMethod</a>()
+                    </li><li>public string <a title="MvcLite\Request" href="../classes/MvcLite_Request/getMethod.html">getMethod</a>()
                     </li><li>public Request <a title="MvcLite\Request" href="../classes/MvcLite_Request/setHeaders.html">setHeaders</a>()
                     </li><li>public Request <a title="MvcLite\Request" href="../classes/MvcLite_Request/setHeader.html">setHeader</a>()
                     </li><li>public array <a title="MvcLite\Request" href="../classes/MvcLite_Request/buildFromString.html">buildFromString</a>()
@@ -137,13 +141,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">100%</td>
-            <td class="nummeric">15 / 15</td>
+            <td class="percent">88.24%</td>
+            <td class="nummeric">15 / 17</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">100%</td>
-            <td class="nummeric">95 / 95</td>
+            <td class="percent">94.12%</td>
+            <td class="nummeric">96 / 102</td>
           </tr>
         </table>
         <h2 id="constants">Constants</h2>
@@ -175,6 +179,9 @@
             <li id="instance"><strong>$instance</strong>
                 —
                 <a title="MvcLite\Traits\Singleton" href="../classes/MvcLite_Traits_Singleton.html">MvcLite\Traits\Singleton</a><br/><span class="indent">Static instance variable</span></li>
+            <li id="method"><strong>$method</strong>
+                —
+                string<br/><span class="indent">Holder for the request method.</span></li>
             <li id="params"><strong>$params</strong>
                 —
                 array<br/><span class="indent">associative array representing the request params</span></li>
@@ -197,6 +204,8 @@
                 — method to get the value for a single header</li>
             <li id="getHeaders"><a title="MvcLite\Request" href="../classes/MvcLite_Request/getHeaders.html">getHeaders()</a>
                 — getter for the headers property</li>
+            <li id="getMethod"><a title="MvcLite\Request" href="../classes/MvcLite_Request/getMethod.html">getMethod()</a>
+                — Getter for the method property.</li>
             <li id="getParam"><a title="MvcLite\Request" href="../classes/MvcLite_Request/getParam.html">getParam()</a>
                 — Gets a single param from the params array</li>
             <li id="getParams"><a title="MvcLite\Request" href="../classes/MvcLite_Request/getParams.html">getParams()</a>
@@ -213,6 +222,8 @@
                 — Sets a single header</li>
             <li id="setHeaders"><a title="MvcLite\Request" href="../classes/MvcLite_Request/setHeaders.html">setHeaders()</a>
                 — Method to set the headers.</li>
+            <li id="setMethod"><a title="MvcLite\Request" href="../classes/MvcLite_Request/setMethod.html">setMethod()</a>
+                — Setter for the $method property.</li>
             <li id="setParam"><a title="MvcLite\Request" href="../classes/MvcLite_Request/setParam.html">setParam()</a>
                 — method to set a param manually</li>
             <li id="setParams"><a title="MvcLite\Request" href="../classes/MvcLite_Request/setParams.html">setParams()</a>
@@ -247,6 +258,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-01-10T07:52:54-05:00 (commit #<span title="127ce4c6b48807d556a2b33507e6f9524d8c6e84">127ce4c</span>)</h3>
+            <div>
+              <p>
+                        Author: Cory Collier (corycollier@corycollier.com) /
+                        Commiter: Cory Collier (corycollier@corycollier.com)
+                    </p>
+              <pre class="wrapped">Updating composer definitions, to reflect recent organizational changes with the repository</pre>
+            </div>
+          </li>
           <li>
             <h3>2015-12-21T13:08:25-05:00 (commit #<span title="561753802e6a888c18973c663a037759a22cf310">5617538</span>)</h3>
             <div>
@@ -411,7 +432,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.8.2-dev - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+      <span>Generated using phpDox 0.8.2-dev - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
     </footer>
   </body>
 </html>
