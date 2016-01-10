@@ -12,7 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\View\Helper\Form;
-use \MvcLite\TestCase as TestCase;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Test Suite for the Form View Helper
@@ -285,8 +285,7 @@ class FormTest extends TestCase
         ];
 
         $sut = new View\Helper\Form;
-        $method = $this->getReflectedMethod('\MvcLite\View\Helper\Form', 'getElementTypeMap');
-        $result = $method->invoke($sut);
+        $result = $this->getReflectionMethod($sut, 'getElementTypeMap')->invoke($sut);
         $this->assertEquals($expected, $result);
 
     }

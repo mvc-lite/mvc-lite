@@ -12,8 +12,8 @@
 namespace MvcLite;
 
 use MvcLite\Filter;
-use MvcLite\TestCase as TestCase;
 use MvcLite\Filter\StringToLower as StringToLower;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * String to lower filter test

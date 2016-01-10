@@ -12,7 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\View\Helper\InputText;
-use MvcLite\TestCase as TestCase;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Unit tests for the MvcLite\View\Helper\InputText class
@@ -24,7 +24,7 @@ use MvcLite\TestCase as TestCase;
  * @author      Cory Collier <corycollier@corycollier.com>
  */
 
-class ViewHelperInputTextTest extends \MvcLite\TestCase
+class ViewHelperInputTextTest extends TestCase
 {
     /**
      * tests the $helper->render() method of MvcLite\View\Helper\InputText

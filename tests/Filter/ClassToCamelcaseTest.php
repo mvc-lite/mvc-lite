@@ -12,8 +12,8 @@
 namespace MvcLite;
 
 use MvcLite\Filter;
-use MvcLite\TestCase as TestCase;
 use MvcLite\Filter\ClassToCamelcase as ClassToCamelcase;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * class to camelcase filter test

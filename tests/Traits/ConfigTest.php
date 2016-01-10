@@ -12,6 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\Traits\Config as ConfigTrait;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Class to test the MvcLite\Traits\Config trait

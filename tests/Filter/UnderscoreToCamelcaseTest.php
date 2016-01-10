@@ -12,8 +12,8 @@
 namespace MvcLite;
 
 use MvcLite\Filter;
-use MvcLite\TestCase as TestCase;
 use MvcLite\Filter\UnderscoreToCamelcase as UnderscoreToCamelcase;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Underscore to camelcase filter test
@@ -25,7 +25,7 @@ use MvcLite\Filter\UnderscoreToCamelcase as UnderscoreToCamelcase;
  * @author      Cory Collier <corycollier@corycollier.com>
  */
 
-class FilterUnderscoreToCamelcaseTest extends \MvcLite\TestCase
+class FilterUnderscoreToCamelcaseTest extends TestCase
 {
     /**
      *

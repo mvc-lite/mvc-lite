@@ -12,6 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\Traits\FilterChain as FilterChainTrait;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Class to test the MvcLite\Traits\FilterChain trait

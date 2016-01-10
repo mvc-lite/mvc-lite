@@ -12,7 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\View\Helper\InputSelect as InputSelect;
-use MvcLite\TestCase as TestCase;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Unit tests for the MvcLite\View\Helper\InputSelect class
@@ -74,7 +74,7 @@ class ViewHelperInputSelectTest extends TestCase
     public function testBuildOptions($expected, $options = [])
     {
         $sut = new InputSelect;
-        $method = $this->getReflectedMethod('\MvcLite\View\Helper\InputSelect', 'buildOptions');
+        $method = $this->getReflectionMethod($sut, 'buildOptions');
         $result = $method->invoke($sut, $options);
         $this->assertEquals($expected, $result);
 

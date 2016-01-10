@@ -11,6 +11,8 @@
 
 namespace MvcLite;
 
+use \PhpUnitTest\TestCase as TestCase;
+
 /**
  * Unit tests for the MvcLite\Filter class
  *
@@ -61,8 +63,7 @@ class FilterChainTest extends TestCase
     public function testFilter($expected, $word, $filters)
     {
         $sut = new FilterChain;
-        $this->getReflectedProperty('\MvcLite\FilterChain', 'filters')
-            ->setValue($sut, $filters);
+        $this->setReflectionPropertyValue($sut, 'filters', $filters);
         $result = $sut->filter($word);
         $this->assertEquals($expected, $result);
     }

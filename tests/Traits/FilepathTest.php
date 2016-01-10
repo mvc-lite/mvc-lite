@@ -12,6 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\Traits\Filepath as FilepathTrait;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Class to test the MvcLite\Traits\Filepath trait
