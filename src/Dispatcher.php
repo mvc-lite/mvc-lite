@@ -136,8 +136,9 @@ class Dispatcher extends ObjectAbstract
     /**
      * Translates a raw request param for a controller into a class name.
      *
-     * @param string $controller
-     * @return string
+     * @param string $controller The raw name for the controller.
+     *
+     * @return string The Full controller class name.
      */
     protected function translateControllerName($controller = '')
     {
@@ -149,9 +150,9 @@ class Dispatcher extends ObjectAbstract
     /**
      * Translates a raw request param for an action into an action name.
      *
-     * @param string $action
+     * @param string $action The raw name for the action.
      *
-     * @return string
+     * @return string The full action name.
      */
     protected function translateActionName($action = '')
     {
