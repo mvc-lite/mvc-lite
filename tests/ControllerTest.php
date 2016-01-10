@@ -11,6 +11,8 @@
 
 namespace MvcLite;
 
+use \PhpUnitTest\TestCase as TestCase;
+
 /**
  * Unit tests for the MvcLite\Controller class
  *

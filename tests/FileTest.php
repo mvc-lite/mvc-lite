@@ -11,6 +11,8 @@
 
 namespace MvcLite;
 
+use \PhpUnitTest\TestCase as TestCase;
+
 /**
  * Test class to test the MvcLite\File class
  *
@@ -90,8 +92,7 @@ class FileTest extends TestCase
 
         $this->assertInstanceOf('\MvcLite\File', $result);
 
-        $result = $this->getReflectedProperty('\MvcLite\File', 'contents')
-            ->getValue($this->sut);
+        $result = $this->getReflectionPropertyValue($this->sut, 'contents');
 
         $this->assertEquals(file_get_contents($filename), $result);
     }
@@ -136,10 +137,8 @@ class FileTest extends TestCase
      */
     public function testGetContents($contents)
     {
-        $this->getReflectedProperty('\MvcLite\File', 'contents')
-            ->setValue($this->sut, $contents);
-
-        $this->assertSame($contents, $this->sut->getContents());
+        $results = $this->getReflectionPropertyValue($this->sut, 'contents');
+        $this->assertSame($results, $this->sut->getContents());
     }
 
     /**

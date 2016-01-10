@@ -12,8 +12,8 @@
 namespace MvcLite;
 
 use MvcLite\Filter;
-use MvcLite\TestCase as TestCase;
 use MvcLite\Filter\SeparatorToUcwords as SeparatorToUcwords;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Separator to upper case words filter test

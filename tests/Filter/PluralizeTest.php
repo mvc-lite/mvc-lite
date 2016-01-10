@@ -12,8 +12,8 @@
 namespace MvcLite;
 
 use MvcLite\Filter;
-use MvcLite\TestCase as TestCase;
 use MvcLite\Filter\Pluralize as Pluralize;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Pluralize filter test

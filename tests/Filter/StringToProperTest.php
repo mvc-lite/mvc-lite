@@ -12,8 +12,8 @@
 namespace MvcLite;
 
 use MvcLite\Filter;
-use MvcLite\TestCase as TestCase;
 use \MvcLite\Filter\StringToProper as StringToProper;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * String to Propert filter test

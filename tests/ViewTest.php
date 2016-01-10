@@ -11,6 +11,8 @@
 
 namespace MvcLite;
 
+use \PhpUnitTest\TestCase as TestCase;
+
 /**
  * Unit tests for the \MvcLite\View class
  *
@@ -23,7 +25,6 @@ namespace MvcLite;
 
 class ViewTest extends TestCase
 {
-
     /**
      * The setup method, called before each test
      */
@@ -217,10 +218,9 @@ class ViewTest extends TestCase
     public function testGetFormat()
     {
         $expected = 'json';
-        $sut = \MvcLite\View::getInstance();
-        $property = $this->getReflectedProperty('\MvcLite\View', 'format');
-        $property->setValue($sut, $expected);
-        $result = $sut->getFormat();
+        $sut      = \MvcLite\View::getInstance();
+        $property = $this->setReflectionPropertyValue($sut, 'format', $expected);
+        $result   = $sut->getFormat();
         $this->assertEquals($expected, $result);
     }
 
@@ -287,7 +287,7 @@ class ViewTest extends TestCase
             ]));
 
         $sut = \MvcLite\View::getInstance();
-        $this->getReflectedProperty('\MvcLite\View', 'helpers')->setValue($sut, $helpers);
+        $this->setReflectionPropertyValue($sut, 'helpers', $helpers);
         $sut->setLoader($loader);
         $result = $sut->getHelper($helper);
         $this->assertInstanceOf('\MvcLite\View\HelperAbstract', $result);

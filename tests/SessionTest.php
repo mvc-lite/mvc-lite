@@ -11,6 +11,8 @@
 
 namespace MvcLite;
 
+use \PhpUnitTest\TestCase as TestCase;
+
 /**
  * Unit tests for the MvcLite\Session class
  *
@@ -42,13 +44,8 @@ class SessionTest extends TestCase
      */
     public function testInit($data = [])
     {
-        // define('PHP_SAPI', 'notcli');
-
         $this->sut->init($data);
-
-        $result = $this->getReflectedProperty('\MvcLite\Session', 'data')
-            ->getValue($this->sut);
-
+        $result = $this->getReflectionPropertyValue($this->sut, 'data');
         $this->assertEquals($data, $result);
     }
 
@@ -73,8 +70,7 @@ class SessionTest extends TestCase
      */
     public function testGetParams($data = [])
     {
-        $property = $this->getReflectedProperty('\MvcLite\Session', 'data');
-        $property->setValue($this->sut, $data);
+        $this->setReflectionPropertyValue($this->sut, 'data', $data);
         $result = $this->sut->getParams();
         $this->assertSame($data, $result);
     }

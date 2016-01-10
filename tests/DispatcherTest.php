@@ -11,6 +11,8 @@
 
 namespace MvcLite;
 
+use \PhpUnitTest\TestCase as TestCase;
+
 /**
  * Unit tests for the MvcLite\Dispatcher class
  *
@@ -198,8 +200,7 @@ class DispatcherTest extends TestCase
             ->with($this->equalTo(['DashToCamelcase', 'StringToProper']))
             ->will($this->returnValue($chain));
 
-        $method = $this->getReflectedMethod('\MvcLite\Dispatcher', 'translateControllerName');
-        $result = $method->invoke($sut, $input);
+        $result = $this->getReflectionMethod($sut, 'translateControllerName')->invoke($sut, $input);
         $this->assertEquals($expected, $result);
     }
 
@@ -255,8 +256,7 @@ class DispatcherTest extends TestCase
             ->with($this->equalTo(['DashToCamelcase']))
             ->will($this->returnValue($chain));
 
-        $method = $this->getReflectedMethod('\MvcLite\Dispatcher', 'translateActionName');
-        $result = $method->invoke($sut, $input);
+        $result = $this->getReflectionMethod($sut, 'translateActionName')->invoke($sut, $input);
         $this->assertEquals($expected, $result);
 
     }

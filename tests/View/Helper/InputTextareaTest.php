@@ -12,7 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\View\Helper\InputTextarea;
-use MvcLite\TestCase as TestCase;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Unit tests for the MvcLite\View\Helper\InputTextarea class

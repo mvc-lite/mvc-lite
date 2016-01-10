@@ -12,8 +12,8 @@
 namespace MvcLite;
 
 use MvcLite\Filter;
-use MvcLite\TestCase as TestCase;
 use MvcLite\Filter\DashToUnderscore as DashToUnderscore;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Dash to underscore filter test

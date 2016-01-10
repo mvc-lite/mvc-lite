@@ -11,6 +11,8 @@
 
 namespace MvcLite;
 
+use \PhpUnitTest\TestCase as TestCase;
+
 /**
  * Unit tests for the MvcLite\Request class
  *
@@ -136,9 +138,7 @@ class RequestTest extends TestCase
      */
     public function testGetHeaders($headers = [])
     {
-        $this->getReflectedProperty('\MvcLite\Request', 'headers')
-            ->setValue($this->sut, $headers);
-
+        $this->setReflectionPropertyValue($this->sut, 'headers', $headers);
         $this->assertSame($headers, $this->sut->getHeaders());
 
     }
@@ -235,10 +235,9 @@ class RequestTest extends TestCase
     {
         $this->assertFalse($this->sut->isAjax());
 
-        $this->getReflectedProperty('\MvcLite\Request', 'headers')
-            ->setValue($this->sut, [
-                'X-Requested-With' => 'XMLHttpRequest'
-            ]);
+        $this->setReflectionPropertyValue($this->sut, 'headers', [
+            'X-Requested-With' => 'XMLHttpRequest'
+        ]);
 
         $this->assertTrue($this->sut->isAjax());
     }
@@ -249,8 +248,7 @@ class RequestTest extends TestCase
     public function testGetUri()
     {
         $expected = 'the expected value';
-        $property = $this->getReflectedProperty('\MvcLite\Request', 'uri');
-        $property->setValue($this->sut, $expected);
+        $this->setReflectionPropertyValue($this->sut, 'uri', $expected);
         $result = $this->sut->getUri();
         $this->assertEquals($expected, $result);
     }

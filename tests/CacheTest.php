@@ -12,6 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\Cache as Cache;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Class to test the MvcLite\Cache object
@@ -34,8 +35,7 @@ class CacheTest extends TestCase
         $sut = Cache::getInstance();
         $sut->init($config);
 
-        $property = $this->getReflectedProperty('\MvcLite\Cache', 'config');
-        $result = $property->getValue($sut);
+        $result = $this->getReflectionPropertyValue($sut, 'config');
 
         $this->assertSame($result, $config);
     }
@@ -147,10 +147,7 @@ class CacheTest extends TestCase
     public function testGetCacheKey(ObjectAbstract $object, $name, $expected)
     {
         $sut = Cache::getInstance();
-        $method = new \ReflectionMethod('\\MvcLite\\Cache', 'getCacheKey');
-        $method->setAccessible(true);
-        $result = $method->invoke($sut, $object, $name);
-
+        $result = $this->getReflectionMethod($sut, 'getCacheKey')->invoke($sut, $object, $name);
         $this->assertSame($expected, $result);
     }
 
@@ -191,8 +188,7 @@ class CacheTest extends TestCase
             ->method('filepath')
             ->will($this->returnValue($expected));
 
-        $method = $this->getReflectedMethod('\MvcLite\Cache', 'getFilePath');
-        $result = $method->invoke($sut, $filename);
+        $result = $this->getReflectionMethod($sut, 'getFilePath')->invoke($sut, $filename);
         $this->assertEquals($expected, $result);
     }
 
