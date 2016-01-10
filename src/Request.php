@@ -34,6 +34,13 @@ class Request extends ObjectAbstract
     const ERR_BAD_CONTENT_TYPE = 'Content type [%s] not recognized';
 
     /**
+     * Holder for the request method.
+     *
+     * @var string
+     */
+    protected $method = 'get';
+
+    /**
      * associative array representing the request params
      *
      * @var array
@@ -65,6 +72,33 @@ class Request extends ObjectAbstract
         $this->params = array_merge($this->params, $_GET);
         $this->setHeaders($_SERVER);
         $this->setParams($this->buildFromString(@$_GET['q']));
+        $this->setMethod($_SERVER);
+    }
+
+    /**
+     * Setter for the $method property.
+     *
+     * @param string $method The request method.
+     *
+     * @return MvcList\Request Returns $this, for object-chaining.
+     */
+    public function setMethod($method)
+    {
+        if (is_array($method)) {
+            $method = $method['REQUEST_METHOD'];
+        }
+        $this->method = $method;
+        return $this;
+    }
+
+    /**
+     * Getter for the method property.
+     *
+     * @return string The request method.
+     */
+    public function getMethod()
+    {
+        return $this->method;
     }
 
     /**
