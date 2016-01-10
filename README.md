@@ -1,11 +1,11 @@
 # MVC Lite
 
-[![Build Status](https://travis-ci.org/corycollier/mvc-lite.svg?branch=master)](https://travis-ci.org/corycollier/mvc-lite)
-[![Latest Stable Version](https://poser.pugx.org/corycollier/mvc-lite/v/stable)](https://packagist.org/packages/corycollier/mvc-lite)
-[![Total Downloads](https://poser.pugx.org/corycollier/mvc-lite/downloads)](https://packagist.org/packages/corycollier/mvc-lite)
-[![Latest Unstable Version](https://poser.pugx.org/corycollier/mvc-lite/v/unstable)](https://packagist.org/packages/corycollier/mvc-lite)
-[![License](https://poser.pugx.org/corycollier/mvc-lite/license)](https://packagist.org/packages/corycollier/mvc-lite)
-[![Coverage Status](https://coveralls.io/repos/corycollier/mvc-lite/badge.svg?branch=master&service=github)](https://coveralls.io/github/corycollier/mvc-lite?branch=master)
+[![Build Status](https://travis-ci.org/mvc-lite/mvc-lite.svg?branch=master)](https://travis-ci.org/mvc-lite/mvc-lite)
+[![Latest Stable Version](https://poser.pugx.org/mvc-lite/mvc-lite/v/stable)](https://packagist.org/packages/mvc-lite/mvc-lite)
+[![Total Downloads](https://poser.pugx.org/mvc-lite/mvc-lite/downloads)](https://packagist.org/packages/mvc-lite/mvc-lite)
+[![Latest Unstable Version](https://poser.pugx.org/mvc-lite/mvc-lite/v/unstable)](https://packagist.org/packages/mvc-lite/mvc-lite)
+[![License](https://poser.pugx.org/mvc-lite/mvc-lite/license)](https://packagist.org/packages/mvc-lite/mvc-lite)
+[![Coverage Status](https://coveralls.io/repos/mvc-lite/mvc-lite/badge.svg?branch=master&service=github)](https://coveralls.io/github/mvc-lite/mvc-lite?branch=master)
 
 
 ## Introduction
@@ -30,4 +30,4 @@ Once created, adding an entire resources (i.e. Users) can be done like this:
 ```
 
 ## Full Documentation
-Full documentation can be found on our [GitHub Pages site](http://corycollier.github.io/mvc-lite)
+Full documentation can be found on our [GitHub Pages site](http://mvc-lite.github.io/mvc-lite)
