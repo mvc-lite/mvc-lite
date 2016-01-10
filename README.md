@@ -30,6 +30,8 @@ Once created, adding an entire resources (i.e. Users) can be done like this:
 ```
 ./bin/mvc resource:create --target=/local/path/to/app --name=users
 ```
-
 ## Full Documentation
 Full documentation can be found on our [GitHub Pages site](http://mvc-lite.github.io/mvc-lite)
+
+## Contact
+We're available on IRC at `chat.freenode.net` in the `#mvc-lite` room. :)
