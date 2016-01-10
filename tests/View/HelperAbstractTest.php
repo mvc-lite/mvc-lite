@@ -12,6 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\View\Helper\Form;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Test Suite for the Abstract View Helper
@@ -23,7 +24,7 @@ use MvcLite\View\Helper\Form;
  * @author      Cory Collier <corycollier@corycollier.com>
  */
 
-class ViewHelperAbstractTest extends \MvcLite\TestCase
+class ViewHelperAbstractTest extends TestCase
 {
     /**
      * Tests MvcLite\View\HelperAbstract.
@@ -36,7 +37,7 @@ class ViewHelperAbstractTest extends \MvcLite\TestCase
     public function testGetHtmlAttribs($expected, $attribs = [])
     {
         $sut = $this->getMockForAbstractClass('\MvcLite\View\HelperAbstract');
-        $method = $this->getReflectedMethod('\MvcLite\View\HelperAbstract', 'getHtmlAttribs');
+        $method = $this->getReflectionMethod($sut, 'getHtmlAttribs');
         $result = $method->invoke($sut, $attribs);
         $this->assertEquals($expected, $result);
     }

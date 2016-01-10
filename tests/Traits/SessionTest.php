@@ -12,6 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\Traits\Session as SessionTrait;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Class to test the MvcLite\Traits\Session trait

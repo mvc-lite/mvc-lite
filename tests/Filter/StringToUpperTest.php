@@ -12,8 +12,8 @@
 namespace MvcLite;
 
 use MvcLite\Filter;
-use MvcLite\TestCase as TestCase;
 use MvcLite\Filter\StringToUpper as StringToUpper;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * String to upper filter test

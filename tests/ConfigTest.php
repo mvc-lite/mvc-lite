@@ -11,6 +11,8 @@
 
 namespace MvcLite;
 
+use \PhpUnitTest\TestCase as TestCase;
+
 /**
  * Unit tests for the MvcLite\Config class
  *
@@ -83,7 +85,7 @@ class ConfigTest extends TestCase
         $result = $sut->set($key, $value);
         $this->assertSame($sut, $result);
 
-        $data = $this->getReflectedProperty('\MvcLite\Config', 'data')->getValue($sut);
+        $data = $this->getReflectionPropertyValue($sut, 'data');
         $result = $data[$key];
         $this->assertEquals($value, $result);
     }
@@ -99,8 +101,7 @@ class ConfigTest extends TestCase
     public function testGet($expected, $key, $data)
     {
         $sut      = Config::getInstance();
-        $property = $this->getReflectedProperty('\MvcLite\Config', 'data');
-        $data     = $property->setValue($sut, $data);
+        $this->setReflectionPropertyValue($sut, 'data', $data);
         $result   = $sut->get($key);
         $this->assertEquals($expected, $result);
     }

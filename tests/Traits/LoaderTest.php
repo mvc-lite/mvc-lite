@@ -12,6 +12,7 @@
 namespace MvcLite;
 
 use MvcLite\Traits\Loader as LoaderTrait;
+use \PhpUnitTest\TestCase as TestCase;
 
 /**
  * Class to test the MvcLite\Traits\Loader trait
@@ -31,8 +32,7 @@ class LoaderTraitsTest extends TestCase
     {
         global $loader;
         $sut = new TestFixtureLoaderTrait;
-        $property = $this->getReflectedProperty('\MvcLite\TestFixtureLoaderTrait', 'loader');
-        $property->setValue($sut, new \stdClass);
+        $property = $this->setReflectionPropertyValue($sut, 'loader', new \stdClass);
         $result = $sut->getLoader();
         $this->assertInstanceOf('\stdClass', $result);
     }
