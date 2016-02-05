@@ -2,6 +2,7 @@
 
 ![MVC Lite](http://mvc-lite.github.io/mvc-lite/images/logo.png)
 
+[![Join the chat at https://gitter.im/mvc-lite/mvc-lite](https://badges.gitter.im/mvc-lite/mvc-lite.svg)](https://gitter.im/mvc-lite/mvc-lite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/mvc-lite/mvc-lite.svg?branch=master)](https://travis-ci.org/mvc-lite/mvc-lite)
 [![Latest Stable Version](https://poser.pugx.org/mvc-lite/mvc-lite/v/stable)](https://packagist.org/packages/mvc-lite/mvc-lite)
 [![Total Downloads](https://poser.pugx.org/mvc-lite/mvc-lite/downloads)](https://packagist.org/packages/mvc-lite/mvc-lite)
